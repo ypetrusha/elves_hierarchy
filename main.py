@@ -16,9 +16,10 @@ each forest has multiple elves (a family), each elf has one forest.
 
 def main():
 
-    df_elves = pd.read_csv("data/elf_families_small.csv")
-    df_forests = pd.read_csv("data/elf_forests.csv")
-    agent = create_pandas_dataframe_agent(OpenAI(temperature=0), [df_elves, df_forests], verbose=True)
+    df_elves = pd.read_csv("data/elves.csv")
+    df_forests = pd.read_csv("data/forests.csv")
+    agent = create_pandas_dataframe_agent(
+        OpenAI(temperature=0, max_tokens=500), [df_elves, df_forests], verbose=True)
 
     print(description)
     while True:
