@@ -22,9 +22,7 @@ def main():
 
     print(description)
     while True:
-        prompt = input(
-            "Ask chatbot about elves: ")
-
+        prompt = input("Ask chatbot about elves: ")
         if prompt.lower() == "quit":
             exit(0)
         else:
